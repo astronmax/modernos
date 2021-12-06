@@ -65,6 +65,11 @@
     background-color: #333;
 }
 
+.thumbnail > img {
+    padding-top: 30%;
+    width: 50%;
+}
+
 @media screen and (max-width: 760px) {
     .container {
         margin: 0;
