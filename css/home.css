@@ -67,7 +67,7 @@
 
 .thumbnail > img {
     padding-top: 30%;
-    width: 50%;
+    max-width: 50%;
 }
 
 @media screen and (max-width: 760px) {
