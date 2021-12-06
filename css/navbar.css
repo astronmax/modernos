@@ -1,0 +1,109 @@
+body.lock { overflow-y: hidden; }
+
+.menu {
+    width: 100%;
+    margin: 0;
+    padding-top: 1rem;
+    padding-bottom: 1rem;
+    justify-content: center;
+    flex: 1;
+}
+
+.menu-list {
+    list-style-type: none;
+    padding: 0;
+    margin: 0;
+}
+
+.menu-list li { float: left; }
+
+.menu-list a {
+    padding: 1rem;
+    text-align: center;
+    display: inline-block;
+}
+
+.menu-list a:hover { text-decoration: underline; }
+
+.active-link {
+    background-color: #0d6efd;
+    border-radius: 1rem;
+}
+
+.burger { display: none; }
+
+/* Media for mobile screens */
+@media screen and (max-width: 760px) {
+
+    /* Burger menu */
+    .burger {
+        display: block;
+        padding-left: 1rem;
+    }
+
+    .burger-icon {
+        position: relative;
+        width: 2.5rem;
+        height: 2.5rem;
+        cursor: pointer;
+    }
+
+    .burger-icon.active > span { transform: scale(0) translate(0px, -50%); }
+    .burger-icon.active::before {
+        top: 50%;
+        transform: rotate(-45deg) translate(0px, -50%);
+    }
+
+    .burger-icon.active::after {
+        bottom: 50%;
+        transform: rotate(45deg) translate(0px, 50%);
+    }
+
+    .burger-icon::before, 
+    .burger-icon::after, 
+    .burger-icon > span {
+        left: 0;
+        position: absolute;
+        height: 10%;
+        width: 100%;
+        transition: all 0.3s ease 0s;
+        background-color: #fff;
+    }
+
+    .burger-icon::before, 
+    .burger-icon::after { content: ""; }
+
+    .burger-icon::before { top: 0; }
+    .burger-icon::after { bottom: 0; }
+
+    .burger-icon > span {
+        top: 50%;
+        transform: scale(1) translate(0px, -50%);
+    }
+
+    /* Menu body */
+    .menu {
+        flex-direction: column;
+        background-color: black;
+    }
+
+    .menu-body {
+        position: relative;
+    }
+
+    .menu-list {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        background-color: rgba(0, 0, 0, 0.9);
+        position: fixed;
+        width: 100%;
+        height: 70%;
+        transform: translate(-100%, 0px);
+        overflow: auto;
+    }
+
+    .menu-list > * { flex: 1; }
+    .menu-list.active { transform: translate(0px, 0px); }
+    .menu-list a { padding: 0.5rem; }
+}

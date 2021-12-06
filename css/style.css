@@ -1,0 +1,58 @@
+/* default tags */
+html, body {
+    background-color: #1a1a1a;
+    color: whitesmoke;
+    font-family: 'Open Sans', sans-serif;
+    margin: 0;
+    padding: 0;
+    height: 100%;
+}
+
+a {
+    text-decoration: none;
+    color: inherit;
+}
+
+footer {
+    background-color: inherit;
+    margin-top: 5rem;
+}
+
+address {
+    padding-left: 3rem;
+    padding-right: 3rem;
+    padding-bottom: 0.5rem;
+}
+
+code {
+    background-color: #333;
+    font-size: 1rem;
+    padding: 0.2rem;
+}
+
+/* flex containers */
+.flex-row { display: flex; }
+.flex-col {
+    display: flex;
+    flex-direction: column;
+}
+
+/* work with text */
+.large { font-size: 3rem; }
+.medium { font-size: 2rem; }
+.small { font-size: 1.25rem; }
+.subtitle { color: #a1a1a1; }
+
+@media screen and (max-width: 760px) {
+    .large { font-size: 2rem; }
+    .medium { font-size: 1.5rem; }
+    .small { font-size: 1rem; }
+}
+
+@media screen and (max-width: 300px) {
+    .large { font-size: 1.5rem; }
+}
+
+@media screen and (max-width: 250px) {
+    p { font-size: 0.9rem; }
+}
