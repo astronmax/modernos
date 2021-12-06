@@ -46,6 +46,8 @@
 
 .content-list li { padding: 0.25rem; }
 
+h1 { clear: both; }
+
 @media screen and (max-width: 760px) {
     .up-button {
         margin: 0.5rem;

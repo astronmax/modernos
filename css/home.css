@@ -63,12 +63,12 @@
 .thumbnail {
     width: 40%;
     background-color: #333;
+    display: flex;
+    justify-content: center;
+    align-items: center;
 }
 
-.thumbnail > img {
-    padding-top: 30%;
-    max-width: 50%;
-}
+.thumbnail > img { max-width: 50%; }
 
 @media screen and (max-width: 760px) {
     .container {
